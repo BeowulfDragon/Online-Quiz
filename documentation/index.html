@@ -1,0 +1,260 @@
+<!-- In dit bestand staat de HTML-code voor je Quiz-documentatie. Je kunt deze code aanpassen. -->
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Documentatie Quiz Frontend Development</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body>
+    <header>
+        <h1>Documentatie</h1>
+    </header>
+    <main>
+        <h2>Schermontwerpen</h2>
+        <a target="_blank" href="SchermOntwerpBegin.png">Schermontwerp
+            beginpagina</a>
+        <a target="_blank" href="SchermOntwerpVragen.png">Schermontwerp
+            vragenpagina</a>
+        <a target="_blank" href="SchermOntwerpEinde.png">Schermontwerp
+            eindpagina</a>
+        <h2>Testscript</h2>
+        <table class="testscript">
+            <tr>
+                <th>Stappen</th>
+                <th>Resultaten</th>
+                <th>Data</th>
+                <th>Acceptance Criteria</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Navigeer naar de site</li>
+                        <li>Voer een ongeldig studentnummer in en klik op "Bevestig studentnummer"</li>
+                        <li>Voer een geldig studentnummer in en klik op "Bevestig studentnummer"</li>
+                        <li>Voer een ongeldig studentnummer in en klik op "Bevestig studentnummer"</li>
+                        <li>Klik op de knop 'Begin de quiz'</li>
+                        <li>Selecteer een antwoord</li>
+                        <li>Selecteer een ander antwoord</li>
+                        <li>Druk op de knop "Volgende vraag"</li>
+                        <li>Selecteer een verkeerde antwoord</li>
+                    </ul>
+                </td>
+                <td>
+                    <span>De website wordt nu weergegeven met een introductie, 2 knoppen en een leeg veld</span>
+                    <span>De spelers studentnummer wordt gecheckt en afgekeurd met de bericht "Ongeldige
+                        studentnummer!"</span>
+                    <span>De spelers naam verschijnt in de header van de website en de "Begin de quiz" knopw wordt gezet
+                        naar opacity = 1. De ongeldige studentnummer tekst verdwijnt ook. Als de studentnummer niet
+                        bestaat wordt de bericht "Student niet gevonden!" getoond</span>
+                    <span>De spelers studentnummer wordt gecheckt en afgekeurd met de bericht "Ongeldige
+                        studentnummer!"</span>
+                    <span>Je belandt op de quiz. Een vraag en 4 antwoorden zijn zichtbaar</span>
+                    <span>Het gegeven antwoord is direct te onderscheiden van de andere antwoorden.</span>
+                    <span>Het pagina blijft hetzelfde als bij het vorige stap</span>
+                    <span>De volgende vraag verschijnt, de koppen zijn wit en hebben andere antwoorden</span>
+                    <span>De verkeerde atnwoord wordt oranje en krijgt strikethrough, de juiste blauw/groen en krijgt
+                        bold</span>
+                </td>
+                <td>
+                    <span>
+                        <a target="_blank" href="https://example.org">The website in question</a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="documentation6.png">Lijst van invalide studentnummers (voorbeeld)</a>
+                    </span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>De kleuren gekozen voor feedback zijn niet rood en groen om spelers met rood-groen
+                        kleurenblindheid
+                        niet te verhinderen</span>
+                    <a target="_blank" href="documentation2.png">HTML, CSS en Javascript</a>
+                </td>
+                <td>
+                    <ul>
+                        <li>De gebruiker ziet welk antwoord hij/zij gekozen heeft (US04)</li>
+                        <li>De quiz registreert of het gegeven antwoord juist of onjuist is (US05)</li>
+                        <li>Het is voor de speler mogelijk precies één antwoord te selecteren (US04)</li>
+                        <li class="strike">De speler kan zijn/haar naam invoeren (US09)</li>
+                        <li>De speler kan zijn/haar studentnummer invoeren en versturen (US10)</li>
+                        <li>Er wordt gecontroleerd of de input valide is. (US10)</li>
+                        <li>Er wordt een melding getoond indien de API aangeeft dat het studentnummer niet klopt (US10)
+                        </li>
+                        <li>Na een foutmelding over een foutief studentnummer kan een speler zijn/haar studentnummer
+                            opnieuw invoeren (US10)</li>
+                        <li>De quiz onthoudt de naam van de speler (US09)</li>
+                        <li>Tijdens het spelen van de quiz wordt de naam van de speler getoond (US09/US10)</li>
+                        <li class="strike">Indien een gebruiker HTML- en/of JavaScript-code intypt in het invoerveld
+                            wordt deze
+                            code
+                            niet uitgevoerd (US09)</li>
+                        <li>Als de speler het juiste antwoord heeft gegeven moet de speler positieve feedback krijgen
+                            (US05)</li>
+                        <li>Als de speler een onjuist antwoord geeft wordt de speler gewezen op de fout (US05)</li>
+                        <li>Het juiste antwoord wordt getoond (US05)</li>
+                        <li>Bij elke goed beantwoorde vraaag wordt de score met 1 verhoogd (US07)</li>
+                        <li>De actuele score is te allen tijde zichtbaar voor de speler (US07)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Volg de stappen in de rij hierboven</li>
+                        <li>Druk op de knop 'Volgende vraag'</li>
+                        <li>Druk op de knop 'Volgende vraag'</li>
+                        <li>Beantwoord de vraag</li>
+                        <li>Druk op de knop 'Volgende vraag'</li>
+                        <li>Druk op de knop 'Vorige vraag' 3 keer</li>
+                        <li>Selecteer een antwoord</li>
+                        <li>Druk op de knop 'Vorige vraag'</li>
+                    </ul>
+                </td>
+                <td>
+                    <span>Alles is zoals het is aan het eind van de vorige stappen</span>
+                    <span>De volgende vraag verschijnt. De tekst linksboven wordt 'Vraag 2', de vraagtekst verandert, en
+                        de 4 knoppen veranderen ook van tekst</span>
+                    <span>Niks gebeurt</span>
+                    <span>De user krijgt feeback zoals in US05</span>
+                    <span>De volgende vraag verschijnt, en de tekst verandert opnieuw. Een multimedia element
+                        verschijnt</span>
+                    <span>De gebruiker vindt zich op de eerste vraag</span>
+                    <span>Niks gebeurt</span>
+                    <span>Niks gebeurt</span>
+                </td>
+                <td>
+                    <span>&nbsp;</span>
+                    <a target="_blank" href="documentation1.png">De verschenen scherm</a>
+                    <span>&nbsp;</span>
+                    <a target="_blank" href="documentation2.png">Een class maken in HTML</a>
+                    <span>&nbsp;</span>
+                    <a target="_blank" href="documentation3.png">Multimedia vraag</a>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                </td>
+                <td>
+                    <ul>
+                        <li>Na het lezen van de feedback heeft de speler de mogelijkheid naar de volgende vraag te gaan
+                            of wordt de speler daar automatisch heen geleid (US06)</li>
+                        <li>Bij het tonen van een nieuwe vraag zijn de vorige vraag en antwoorden niet meer zichtbaar
+                            (US06)</li>
+                        <li>Bij het terugkeren naar een vorige vraag is het niet mogelijk gegeven atwoorden aan te
+                            passen en daarmee de score te beinvloeden (US15)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Volg de stappen hierboven</li>
+                        <li>Beantwoord de rest van de vragen</li>
+                        <li>Beantwoord de laatste vraag</li>
+                        <li>Bij het laatste vraag, druk op de 'Einde quiz' knop</li>
+                        <li>Druk op de "Delen met Twitter" knop</li>
+                        <li>Refresh de pagina</li>
+                        <li>Volg de stappen hierboven tot de laatste vraag</li>
+                        <li>Open de developer console, en selecteer Network</li>
+                        <li>Blokeer requests naar de API</li>
+                        <li>Beantwoord de laatste vraag</li>
+                        <li>Ga naar de eindpagina</li>
+                    </ul>
+                </td>
+                <td>
+                    <span>&nbsp;</span>
+                    <span>5 van de vragen bevatten multimedia elementen. Bij de laatste vraag verandert de knop
+                        'Volgende vraag' in 'Einde quiz'</span>
+                    <span>In de console verschijnt een bericht dat de scores verstuurd zijn, en de eindpagina wordt
+                        geupdate zonder dat de speler het ziet</span>
+                    <span>De einde quiz pagina wordt getoond, met de eindscore van de speler en een leaderboard</span>
+                    <span>Twitter opent met een tweet al gemaakt met de spelers score en tijd</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>Requests naar de API worden nu geblokkeerd</span>
+                    <span>De POST request naar de API wordt geblokkerd. Er vertschijnt een alert.</span>
+                    <span>Op de eindpagina wordt getoond dat de score niet opgeslagen is</span>
+                </td>
+                <td>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span><a target="_blank" href="documentation4.png">De laatste vraag</a></span>
+                    <span><a target="_blank" href="documentation5.png">De eindscherm</a></span>
+                    <span><a target="_blank" href="atbeowulfdragonontwitterbesuretofollow.png">De tweet</a></span>
+                </td>
+                <td>
+                    <ul>
+                        <li>Als de speler de laatste vraag heeft beantwoord worden er geen vragen meer getoond (US08)
+                        </li>
+                        <li>Er wordt een bericht getoond aan de speler als de quiz afgelopen is (US08)</li>
+                        <li>Minimaal 5 vragen bestaan uit een unieke mix van tekst, afbeeldingen, (GIF-)animaties en/of
+                            videos (US16)</li>
+                        <li>Als alle vragen zijn beantwoord zijn is het studentnummer en de score van de speler
+                            verstuurd naar de API (US11)</li>
+                        <li>De tijd wordt in gehele seconden doorgegeven aan de API (US13)</li>
+                        <li>De benodigde tijd is niet korter dat 1 seconde en niet langer dan 3600 seconden (1 uur)
+                            (US13)</li>
+                        <li>Indien de API een foutmelding geeft wordt deze foutmelding in de quiz getoond op een manier
+                            zodat de quizmaster kan zien wat er mis is gegaan.
+                            De gebruiker ziet dat het opslaan van de scores niet is gelukt. (US11)</li>
+                        <li>Het is voor de developer van de quiz duidelijk als de quiz-resultaten correct zijn
+                            opgeslagen (US11)</li>
+                        <li>De scores zijn gesorteerd op aflopende volgorde (US14)</li>
+                        <li>Er worden maximaal 10 topscores getoond (US14)</li>
+                        <li>De topscores zijn actueel op het moment van het tonen (US14)</li>
+                        <li>De inhoud van de post bevat: Naam van de quiz, de score, de quiztijd (indien beschikbaar)
+                            (US17)</li>
+                        <li>De inhoud bevat <strong>niet</strong>: De gegevens van de gebruiker, de gegevens van de
+                            quizmaster, de url van de quiz (US17)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Navigeer naar de website</li>
+                        <li>Open de developer console op je browser</li>
+                        <li>Klik op de responsive design knop</li>
+                        <li>Volg de stappen hierboven/doe de quiz</li>
+                    </ul>
+                </td>
+                <td>
+                    <span>De website verschijnt</span>
+                    <span>De developer console verschijnt</span>
+                    <span>De view van de website emuleert een mobiele telefoon</span>
+                    <span>Een paar schermen hebben een andere layout om mobiele telefoons toe te passen. Je hoeft/kan
+                        alleen verticaal scrollen</span>
+                </td>
+                <td>
+                    <span>
+                        <a target="_blank" href="https://example.org">The website in question</a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="documentation7.png">De developer tools</a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="documentation8.png">De icoon voor responsive design</a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="documentation9.png">Een voorbeeld van de responsive versie van de
+                            pagina</a>
+                    </span>
+                </td>
+                <td>
+                    <ul>
+                        <li>Er is gebruik gemaakt van Responsive Web Design. (US12)</li>
+                        <li>Als de speler moet scrollen mag dit alleen verticaal kunnen (US12)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+/*
+ * These were global variables, but that threw up errors
+    --vivid-sky-blue: #0ad0f7ff;
+    --blue-munsell: #0293b0ff;
+    --pacific-blue: #16acc9ff;
+    --orange-soda: #f75231ff;
+    --copper-red: #d66b4dff;
+    --metallic-seaweed: #0a7d94ff;
+    --good-green: #33e120ff;
+    --rage-red: #dc1010ff;
+*/
+
+html {
+    background-color: #1F1F1F;
+    font-family: sans-serif;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    background-color: #0ad0f7ff;
+    text-align: center;
+    filter: drop-shadow(0 0 4px);
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+    background-color: #16acc9ff;
+    filter: drop-shadow(0 0 4px);
+    height: 100%;
+    position: static;
+}
+
+.intro-text {
+    grid-area: intro-text;
+}
+
+#name-input {
+    grid-area: name-input;
+    background-color: aliceblue;
+    border-style: groove;
+    border: 1px;
+    filter: drop-shadow(2px 3px 2px);
+    padding: 0.5em;
+}
+
+#name-confirm {
+    grid-area: name-confirm;
+    background-color: aliceblue;
+    border-style: groove;
+    border: 1px;
+    filter: drop-shadow(2px 3px 2px);
+}
+
+#button-questions {
+    grid-area: button-questions;
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: aliceblue;
+    border-style: groove;
+    border: 1px;
+    filter: drop-shadow(2px 3px 2px);
+}
+
+.intro-grid {
+    display: grid;
+    padding: 1em;
+}
+
+@media (max-width: 500px) {
+    .intro-grid {
+        grid-template-areas:
+            'intro-text'
+            'name-input'
+            'name-confirm'
+            'button-questions';
+        grid-gap: 1em;
+    }
+
+    #name-input {
+        height: 2em;
+    }
+
+    #name-confirm {
+        height: 3em;
+    }
+
+    #button-questions {
+        height: 3em;
+    }
+
+    #multimedia {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .end-grid {
+        display: grid;
+        grid-template-areas:
+            'end-text'
+            'highscores'
+            'twitter';
+    }
+
+    .answer-buttons {
+        height: 7em;
+    }
+
+    .end-text {
+        text-align: center;
+    }
+
+    #twitter {
+        text-align: center;
+    }
+}
+
+@media (min-width: 500px) {
+    .intro-grid {
+        grid-template-areas:
+            'intro-text name-input'
+            'intro-text name-confirm'
+            'intro-text .'
+            'intro-text button-questions'
+            'intro-text .';
+        grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+        grid-gap: 1%;
+    }
+
+    #multimedia {
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .answer-buttons {
+        height: 3.5em;
+    }
+
+    .end-grid {
+        display: grid;
+        grid-template-areas:
+            'end-text highscores'
+            'twitter highscores';
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 4fr 1fr;
+    }
+}
+
+@media (max-height: 670px) {
+    main {
+        margin-bottom: 7%;
+    }
+}
+
+#question-text {
+    text-align: center;
+}
+
+.grid-container {
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main';
+    grid-gap: 10px;
+}
+
+a {
+    color: black
+}
+
+
+.page-questions {
+    display: grid;
+    grid-template-areas:
+        'question-text .scoreboard'
+        'answer-grid answer-grid';
+    grid-template-columns: 10fr 1fr;
+}
+
+.liveinfo {
+    display: flex;
+    width: 100%
+}
+
+#live-grade {
+    margin-left: auto;
+}
+
+.question-info {
+    padding: 0.5em;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-areas:
+        'answer-a answer-b'
+        'answer-c answer-d'
+        'question-last question-next';
+}
+
+.answer-buttons {
+    background-color: aliceblue;
+    border-style: groove;
+    border: 1.5px;
+    margin: .5em;
+    filter: drop-shadow(2px 3px 2px);
+    font-size: 12pt;
+}
+
+.question-navigation {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+#twitter {
+    margin: 0.5em;
+    background-color: aliceblue;
+    border-style: groove;
+    border: 1px;
+    filter: drop-shadow(2px 3px 2px);
+    grid-area: twitter;
+    height: 3.5em;
+}
+
+.end-text {
+    grid-area: end-text;
+    margin-left: 0.5em;
+}
+
+.highscores {
+    grid-area: highscores;
+    border: solid;
+    margin: 0.5em;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    vertical-align: top;
+    padding: 5px 10px 5px 10px
+}
+
+footer {
+    background-color: #16acc9ff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    width: 100%;
+    font-size: .75em;
+}
+
+.documentation-link {
+    width: 50%;
+    float: right;
+    padding-top: 1em;
+}
+
+/*documentation here, I didn't do this*/
+testscript {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+.testscript th,
+.testscript td {
+    border: 1px solid #000000;
+    vertical-align: top;
+    padding: 5px 10px 5px 10px;
+}
+
+.testscript ul {
+    margin: 0;
+}
+
+.testscript li,
+.testscript span {
+    margin: 8px 0;
+}
+
+.testscript span {
+    display: block;
+    margin: 8px 0;
+}
+
+.strike {
+    text-decoration: line-through;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frontend Quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Frontend Development Quiz</h1>
+            <p id="player-name">&nbsp;</p>
+            <p id="live-timer">&nbsp;</p>
+        </header>
+        <main>
+            <div class="page" id="page-start">
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h2>Start</h2>
+                        <p>Test je kennis van HTML, CSS, en JavaScript! Vul je naam in, bevestig het, en klik op de
+                            begin knop om te starten</p>
+                        <h2>Hoe werkt de quiz?</h2>
+                        <p>De quiz bestaat uit 10 multiple choice vragen, waarbij je een van de vier antwoorden moet
+                            selecteren. Nadat je een antwoord geselecteerd hebt krijg je het antwoord te zien en kun je
+                            door
+                            naar de volgende vraag. Je kunt op elk moment teruggaan naar vorige vragen, maar je kunt
+                            jouw
+                            antwoorden niet veranderen. Dit quiz duurt gemiddeld XX minuten.</p>
+                        <p>Na het afloop van de quiz krijg je te zien hoeveel antwoorden je goed hebt, en kun je de
+                            antwoorden delen via sociale media.</p>
+                    </div>
+                    <input id="name-input">
+                    <button id="name-confirm">Bevestig studentnummer</button>
+                    <strong id="input-error"></strong>
+                    <button id="button-questions">Begin de quiz</button>
+                </div>
+            </div>
+            <div class="page" id="page-questions">
+                <div class="question-info">
+                    <div class="liveinfo">
+                        <h2 id="question-number">Vraag 1</h2>
+                        <h2 id="live-grade">0/10 goed</h2>
+                    </div>
+                    <img src="multimedia/array.jpg" id="multimedia" alt="">
+                    <!-- Alt text is only here to make the validation pass for now. Screen reader accessability is not in any ACs or in the DoD -->
+                    <p id="question-text">Een webpagina bestaat typisch uit</p>
+                </div>
+                <div class="answer-grid">
+                    <button id="answer-a" class="answer-buttons">HTML</button>
+                    <button id="answer-b" class="answer-buttons">C++</button>
+                    <button id="answer-c" class="answer-buttons">HTML, CSS en Javascript</button>
+                    <button id="answer-d" class="answer-buttons">HTML, CSS en Java</button>
+                    <button id="question-last" class="answer-buttons question-navigation">Vorige vraag</button>
+                    <button id="question-next" class="answer-buttons question-navigation">Volgende vraag</button>
+                </div>
+            </div>
+            <div class="page" id="page-end">
+                <div class="end-grid">
+                    <div class="end-text">
+                        <h2>Einde quiz</h2>
+                        <p id="congrats-name"></p>
+                        <p id="grade"></p>
+                        <p id="score-errors"></p>
+                    </div>
+                    <button id="twitter">Delen met Twitter</button>
+                    <table class="highscores">
+                        <tr>
+                            <th>Naam</th>
+                            <th>Score</th>
+                            <th>Tijd</th>
+                        </tr>
+                        <tr id="entry-0">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-1">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-2">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-3">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-4">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-5">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-6">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-7">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-8">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="entry-9">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <a class="documentation-link" href="documentation/index.html">
+            Bekijk hier mijn documentatie
+        </a>
+        <p id="i-made-this">Door Alex Sutherland</p>
+    </footer>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
